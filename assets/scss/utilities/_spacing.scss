@@ -2,6 +2,7 @@ $spacing: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20;
 $directions: top, right, bottom, left;
 
 @each $space in $spacing {
+
   // Creating margin utilities
   .m-#{$space} {
     margin: #{space}rem !important;
@@ -13,6 +14,7 @@ $directions: top, right, bottom, left;
   }
 
   @each $direction in $directions {
+
     // Creating margin utilities for all direction
     .m#{str-slice($direction, 0, 1)}-#{$space} {
       margin-#{$direction}: #{$space}rem !important;
@@ -30,8 +32,10 @@ $space-axis-values: 1, 2, 3, 4, 5;
 $space-axis-key: "x" "right", "y" "bottom";
 
 @each $space-axis in $space-axis-values {
-  @each $key, $value in $space-axis-key {
-    .space-#{$key}-#{$space-axis} > * {
+
+  @each $key,
+  $value in $space-axis-key {
+    .space-#{$key}-#{$space-axis}>* {
       margin-#{$value}: #{$space-axis}rem;
     }
   }

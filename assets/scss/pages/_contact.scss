@@ -16,9 +16,7 @@
     padding: 8rem 6rem;
   }
 
-  @include mixins.responsive(xxlg) {
-    padding: 8rem 20rem;
-  }
+  @include mixins.responsive(xxlg) {}
 
   &-card {
     display: flex;
@@ -71,6 +69,7 @@
 
       p {
         color: gray;
+
         @include mixins.responsive(xs) {
           font-size: 0.9rem;
         }

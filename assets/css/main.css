@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +7,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   scroll-margin-top: 50px;
+  overflow-x: hidden;
 }
 
 a {
@@ -27,7 +27,7 @@ a {
   animation: color-change 10s infinite;
 }
 
-  {
+.line {
   width: 6rem;
   height: 0.5rem;
   border-radius: 6px;
@@ -48,9 +48,7 @@ a {
   display: none;
 }
 
-.btn,
-.btn-primary-outlined,
-.btn-primary {
+.btn, .btn-primary-outlined, .btn-primary {
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   line-height: 1;
@@ -61,33 +59,27 @@ a {
   display: inline-block;
   cursor: pointer;
 }
-
 .btn-primary {
   background-color: #3f43fd;
   color: #fff;
 }
-
 .btn-primary:hover {
   background-color: #3135e8;
 }
-
 .btn-primary-outlined {
   background-color: #fff;
   border: 2px solid #3f43fd;
   color: #3f43fd;
 }
-
 .btn-primary-outlined:hover {
   background-color: #3f43fd;
   color: #fff;
 }
 
-.badge,
-.badge-primary {
+.badge, .badge-primary {
   padding: 0px 10px;
   border-radius: 10px;
 }
-
 .badge-primary {
   background-color: #3f43fd;
   color: #fff;
@@ -96,12 +88,11 @@ a {
 .form-control {
   padding: 0.8rem 1.5rem;
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: rgb(247, 247, 247);
   border: none;
   border-radius: 5px;
   outline: none;
 }
-
 .form-control:focus {
   border: 2px solid #3f43fd;
 }
@@ -125,80 +116,67 @@ a {
   align-items: center;
   border-bottom: 1px solid #eee;
 }
-
 @media only screen and (max-width: 576px) {
   .header {
     padding: 1rem 2rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .header {
     padding: 1rem 2rem;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .header {
     padding: 1rem 2rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .header {
     padding: 1rem 6rem;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .header {
     padding: 1rem 15rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .header {
     padding: 1rem 20rem;
   }
 }
-
 @media only screen and (max-width: 576px) {
-  .header h2>span {
+  .header h2 > span {
     font-size: 1rem;
   }
 }
-
 .header .nav-toggler {
   display: none;
 }
-
 @media only screen and (max-width: 576px) {
   .header .nav-toggler {
     display: block;
     font-size: 1.3rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .header .nav-toggler {
     display: block;
     font-size: 1.3rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .header .nav-toggler {
     display: none;
   }
 }
-
 .header--menu {
   display: flex;
   align-items: center;
   list-style: none;
   text-transform: uppercase;
 }
-
 @media only screen and (max-width: 576px) {
   .header--menu {
     display: none;
@@ -211,26 +189,21 @@ a {
     z-index: 1;
     transition: 500ms;
   }
-
   .header--menu.show {
     display: block;
     text-align: center;
     top: 64px;
   }
-
   .header--menu li {
     padding: 2rem;
   }
-
   .header--menu li a {
     color: #fff;
   }
-
   .header--menu li a.active {
     color: #000;
   }
 }
-
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .header--menu {
     display: none;
@@ -243,48 +216,39 @@ a {
     z-index: 1;
     transition: 500ms;
   }
-
   .header--menu.show {
     display: block;
     text-align: center;
     top: 64px;
   }
-
   .header--menu li {
     padding: 2rem;
   }
-
   .header--menu li a {
     color: #fff;
   }
-
   .header--menu li a.active {
     color: #000;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .header--menu {
     display: flex;
   }
 }
-
-.header--menu__item>a {
+.header--menu__item > a {
   margin-right: 1.5rem;
   font-size: 14px;
   font-weight: 600;
   color: #242424;
   transition: 200ms;
 }
-
-.header--menu__item>a:hover {
+.header--menu__item > a:hover {
   color: #3f43fd;
 }
-
-.header--menu__item>a.active {
+.header--menu__item > a.active {
   color: #3f43fd;
 }
-
 .header.navbar-fixed {
   position: fixed;
   top: -1px;
@@ -301,7 +265,6 @@ a {
     display: none;
   }
 }
-
 .background-shapes .box1 {
   position: absolute;
   top: 20%;
@@ -315,7 +278,6 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 .background-shapes .box2 {
   position: absolute;
   top: 80%;
@@ -329,14 +291,12 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 @media only screen and (min-width: 576px) {
   .background-shapes .box2 {
     top: 75%;
     left: 75%;
   }
 }
-
 .background-shapes .box3 {
   position: absolute;
   top: 30%;
@@ -350,7 +310,6 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 .background-shapes .dot1 {
   position: absolute;
   top: 77%;
@@ -363,7 +322,6 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 .background-shapes .dot2 {
   position: absolute;
   top: 18%;
@@ -376,20 +334,17 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 @media only screen and (min-width: 576px) {
   .background-shapes .dot2 {
     top: 22%;
     left: 80%;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .background-shapes .dot2 {
     top: 15%;
   }
 }
-
 .background-shapes .dot3 {
   position: absolute;
   top: 90%;
@@ -402,7 +357,6 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 .background-shapes .dot4 {
   position: absolute;
   top: 91%;
@@ -415,7 +369,6 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 .background-shapes .heart1 {
   font-size: 1.5rem;
   position: absolute;
@@ -425,20 +378,17 @@ a {
   color: #f4284a;
   animation: box-shape linear 5s infinite;
 }
-
 @media only screen and (min-width: 576px) {
   .background-shapes .heart1 {
     top: 40%;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .background-shapes .heart1 {
     top: 40%;
     left: 5%;
   }
 }
-
 .background-shapes .heart2 {
   font-size: 1.5rem;
   position: absolute;
@@ -448,21 +398,18 @@ a {
   color: #f4284a;
   animation: box-shape linear 5s infinite;
 }
-
 @media only screen and (min-width: 992px) {
   .background-shapes .heart2 {
     top: 60%;
     right: 5%;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .background-shapes .heart2 {
     top: 55%;
     right: 5%;
   }
 }
-
 .background-shapes .circle1 {
   position: absolute;
   top: 80%;
@@ -475,13 +422,11 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 @media only screen and (min-width: 576px) {
   .background-shapes .circle1 {
     top: 90%;
   }
 }
-
 .background-shapes .circle2 {
   position: absolute;
   top: 24%;
@@ -494,13 +439,11 @@ a {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
-
 @media only screen and (min-width: 768px) {
   .background-shapes .circle2 {
     top: 10%;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .background-shapes .circle2 {
     top: 15%;
@@ -513,60 +456,49 @@ footer {
   background-color: #3f43fd;
   color: #fff;
 }
-
 @media only screen and (max-width: 576px) {
   footer h2 {
     font-size: 1.2rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   footer h2 {
     font-size: 1.2rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   footer h2 {
     font-size: 1.5rem;
   }
 }
-
 footer p {
   color: #e8e8e8;
 }
-
 @media only screen and (max-width: 576px) {
   footer p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   footer p {
     font-size: 0.9rem;
   }
 }
-
 footer a {
   color: #fff;
 }
-
 footer a:hover {
   text-shadow: 2px 2px 10px #000;
 }
-
-footer .social-icons>a>i {
+footer .social-icons > a > i {
   transition: 500ms;
   font-size: 1.5rem;
   padding: 0 10px;
   color: #1619a0;
 }
-
-footer .social-icons>a>i:hover {
-  color: #e0e0e0;
+footer .social-icons > a > i:hover {
+  color: rgb(224, 224, 224);
 }
-
 footer .legal {
   font-size: 0.9rem;
 }
@@ -575,36 +507,29 @@ footer .legal {
   0% {
     color: red;
   }
-
   50% {
     color: blue;
   }
-
   100% {
     color: green;
   }
 }
-
 @keyframes box-shape {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 @keyframes rotate-infinite {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 .m-1 {
   margin: spacerem !important;
 }
@@ -1205,43 +1130,43 @@ footer .legal {
   padding-left: 20rem !important;
 }
 
-.space-x-1>* {
+.space-x-1 > * {
   margin-right: 1rem;
 }
 
-.space-y-1>* {
+.space-y-1 > * {
   margin-bottom: 1rem;
 }
 
-.space-x-2>* {
+.space-x-2 > * {
   margin-right: 2rem;
 }
 
-.space-y-2>* {
+.space-y-2 > * {
   margin-bottom: 2rem;
 }
 
-.space-x-3>* {
+.space-x-3 > * {
   margin-right: 3rem;
 }
 
-.space-y-3>* {
+.space-y-3 > * {
   margin-bottom: 3rem;
 }
 
-.space-x-4>* {
+.space-x-4 > * {
   margin-right: 4rem;
 }
 
-.space-y-4>* {
+.space-y-4 > * {
   margin-bottom: 4rem;
 }
 
-.space-x-5>* {
+.space-x-5 > * {
   margin-right: 5rem;
 }
 
-.space-y-5>* {
+.space-y-5 > * {
   margin-bottom: 5rem;
 }
 
@@ -1251,144 +1176,120 @@ footer .legal {
   justify-content: space-around;
   align-items: center;
 }
-
 @media only screen and (max-width: 576px) {
   .hero-area {
     padding: 4rem 2rem;
     flex-direction: column;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .hero-area {
     padding: 4rem 2rem;
     flex-direction: column;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .hero-area {
     padding: 8rem 6rem;
     flex-direction: row;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .hero-area {
     padding: 8rem 15rem;
     justify-content: space-between;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .hero-area {
     padding: 8rem 20rem;
     justify-content: space-between;
   }
 }
-
 .hero-area img {
   width: 25rem;
 }
-
 @media only screen and (min-width: 1200px) {
   .hero-area img {
     width: 30rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .hero-area img {
     width: 40rem;
   }
 }
-
 .hero-area--contents {
   max-width: 34rem;
 }
-
 @media only screen and (min-width: 992px) {
   .hero-area--contents {
     max-width: 25rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .hero-area--contents {
     max-width: 40rem;
   }
 }
-
 .hero-area--title {
   font-size: 3rem;
   font-weight: 600;
 }
-
 @media only screen and (max-width: 576px) {
   .hero-area--title {
     font-size: 2rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .hero-area--title {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .hero-area--title {
     font-size: 2rem;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .hero-area--title {
     font-size: 2.5rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .hero-area--title {
     font-size: 3rem;
   }
 }
-
-.hero-area--title>span {
+.hero-area--title > span {
   font-size: 1.5rem;
 }
-
 @media only screen and (min-width: 1400px) {
-  .hero-area--title>span {
+  .hero-area--title > span {
     font-size: 3rem;
   }
 }
-
 .hero-area--desc {
   margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.8;
   color: gray;
 }
-
 @media only screen and (max-width: 576px) {
   .hero-area--desc {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .hero-area--desc {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .hero-area--desc {
     font-size: 1rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .hero-area--desc {
     font-size: 1.2rem;
@@ -1403,7 +1304,6 @@ footer .legal {
   align-items: center;
   margin-top: 11rem;
 }
-
 @media only screen and (max-width: 576px) {
   .about-area {
     padding: 4rem 2rem;
@@ -1411,7 +1311,6 @@ footer .legal {
     margin-top: 0;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .about-area {
     padding: 4rem 2rem;
@@ -1419,7 +1318,6 @@ footer .legal {
     margin-top: 0;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .about-area {
     padding: 8rem 6rem;
@@ -1428,106 +1326,87 @@ footer .legal {
     align-items: center;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .about-area {
     padding: 8rem 15rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .about-area {
     padding: 8rem 20rem;
   }
 }
-
 .about-area--img {
   width: 32rem;
 }
-
 @media only screen and (min-width: 576px) {
   .about-area--img {
     width: 20rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .about-area--img {
     width: 64rem;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .about-area--img {
     width: 100rem;
   }
 }
-
 .about-area--contents {
   color: #fff;
 }
-
 @media only screen and (max-width: 576px) {
   .about-area--contents {
     margin: 0;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .about-area--contents {
     margin: 0;
   }
 }
-
 .about-area--contents h2 {
   font-size: 3rem;
 }
-
 @media only screen and (max-width: 576px) {
   .about-area--contents h2 {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .about-area--contents h2 {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .about-area--contents h2 {
     font-size: 3rem;
   }
 }
-
 .about-area--contents p {
   line-height: 2;
   color: #cfcfcf;
 }
-
 @media only screen and (max-width: 576px) {
   .about-area--contents p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .about-area--contents p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .about-area--contents p {
     font-size: 1rem;
   }
 }
-
 .about-area--contents p a {
   color: #fff;
 }
-
 .about-area--contents p a:hover {
   text-shadow: 10px 20px 30px black;
 }
@@ -1535,74 +1414,61 @@ footer .legal {
 .roadmap {
   padding: 8rem 20rem;
 }
-
 @media only screen and (max-width: 576px) {
   .roadmap {
     padding: 4rem 2rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .roadmap {
     padding: 4rem 2rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap {
     padding: 8rem 4rem;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .roadmap {
     padding: 8rem 4rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .roadmap {
     padding: 8rem 10rem;
   }
 }
-
 .roadmap--heading {
   text-align: center;
 }
-
 .roadmap--heading h5 {
   font-size: 2rem;
 }
-
 .roadmap--heading p {
   color: gray;
 }
-
 .roadmap--items {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
 }
-
 @media only screen and (max-width: 576px) {
   .roadmap--items {
     flex-direction: column;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .roadmap--items {
     flex-direction: column;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap--items {
     flex-direction: row;
   }
 }
-
 .roadmap--item {
   transition: 500ms;
   position: relative;
@@ -1613,30 +1479,25 @@ footer .legal {
   filter: grayscale(100%);
   margin-left: 3rem;
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap--item {
     max-width: 600px;
     padding: 0;
   }
 }
-
 .roadmap--item:hover .roadmap--item__img::after {
   animation: rotate-infinite 4000ms linear infinite;
 }
-
 .roadmap--item__img {
   position: relative;
   width: 100px;
   height: 100px;
   margin: 0 auto 30px;
 }
-
 .roadmap--item__img img {
   width: 60px;
   margin-top: 25px;
 }
-
 .roadmap--item__img::after {
   position: absolute;
   top: 0;
@@ -1647,45 +1508,37 @@ footer .legal {
   border: 5px dotted #3f43fd;
   border-radius: 50%;
 }
-
 .roadmap--item__contents {
   margin-top: 2rem;
 }
-
 .roadmap--item__contents h5 {
   font-size: 1.5rem;
   font-weight: 600;
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap--item__contents h5 {
     font-size: 1rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .roadmap--item__contents h5 {
     font-size: 1.5rem;
   }
 }
-
 .roadmap--item__contents p {
   color: gray;
   line-height: 1.5;
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap--item__contents p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .roadmap--item__contents p {
     font-size: 1rem;
   }
 }
-
 .roadmap--item:not(:last-child)::before {
   transition: 500ms;
   position: absolute;
@@ -1701,7 +1554,6 @@ footer .legal {
   line-height: 1;
   color: #020702;
 }
-
 @media only screen and (max-width: 576px) {
   .roadmap--item:not(:last-child)::before {
     content: "\f107";
@@ -1709,7 +1561,6 @@ footer .legal {
     left: 35%;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .roadmap--item:not(:last-child)::before {
     content: "\f107";
@@ -1717,7 +1568,6 @@ footer .legal {
     left: 40%;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap--item:not(:last-child)::before {
     content: "\f054";
@@ -1726,12 +1576,10 @@ footer .legal {
     right: -30%;
   }
 }
-
 .roadmap--item:hover:not(:last-child)::before {
   color: #3f43fd;
   right: -32%;
 }
-
 .roadmap--item:hover:last-child::after {
   position: absolute;
   top: 35%;
@@ -1744,28 +1592,24 @@ footer .legal {
   line-height: 1;
   color: #3f43fd;
 }
-
 @media only screen and (max-width: 576px) {
   .roadmap--item:hover:last-child::after {
     top: 90%;
     left: -20%;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .roadmap--item:hover:last-child::after {
     top: 90%;
     left: -20%;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .roadmap--item:hover:last-child::after {
     top: 100%;
     left: -20%;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .roadmap--item:hover:last-child::after {
     top: 35%;
@@ -1773,11 +1617,9 @@ footer .legal {
     right: -30%;
   }
 }
-
 .roadmap--item:hover h5 {
   color: #3f43fd;
 }
-
 .roadmap--item:hover {
   filter: grayscale(0);
 }
@@ -1786,257 +1628,207 @@ footer .legal {
   padding: 8rem 20rem;
   background-color: #3f43fd;
 }
-
 @media only screen and (max-width: 576px) {
   .courses {
     padding: 4rem 2rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .courses {
     padding: 4rem 2rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .courses {
     padding: 8rem 4rem;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .courses {
     padding: 8rem 4rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses {
     padding: 8rem 10rem;
   }
 }
-
 .courses--heading {
   text-align: center;
 }
-
 .courses--heading h2 {
   font-size: 2rem;
   color: #fff;
 }
-
 @media only screen and (max-width: 576px) {
   .courses--heading h2 {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .courses--heading h2 {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses--heading h2 {
     font-size: 2rem;
   }
 }
-
 .courses--heading p {
-  color: #dfdfdf;
+  color: rgb(223, 223, 223);
 }
-
 @media only screen and (max-width: 576px) {
   .courses--heading p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .courses--heading p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses--heading p {
     font-size: 1rem;
   }
 }
-
 .courses-cards {
   display: flex;
   justify-content: space-around;
 }
-
 @media only screen and (max-width: 576px) {
   .courses-cards {
     flex-direction: column;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .courses-cards {
     flex-direction: column;
     align-items: center;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .courses-cards {
     flex-direction: row;
     align-items: center;
   }
 }
-
 .courses-card {
   background-color: #fff;
   max-width: 380px;
   border-radius: 10px;
   overflow: hidden;
 }
-
 @media only screen and (min-width: 992px) {
   .courses-card {
     max-width: 280px;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses-card {
     max-width: 350px;
   }
 }
-
 .courses-card--img {
   width: 380px;
 }
-
 @media only screen and (min-width: 992px) {
   .courses-card--img {
     width: 280px;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses-card--img {
     width: 350px;
   }
 }
-
 .courses-card--body {
   padding: 2rem;
 }
-
 .courses-card--body h4 {
   font-size: 1.5rem;
 }
-
 @media only screen and (max-width: 576px) {
   .courses-card--body h4 {
     font-size: 1.3rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .courses-card--body h4 {
     font-size: 1.3rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .courses-card--body h4 {
     font-size: 1rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses-card--body h4 {
     font-size: 1.5rem;
   }
 }
-
 .courses-card--body p {
   color: gray;
   line-height: 1.5;
 }
-
 @media only screen and (max-width: 576px) {
   .courses-card--body p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .courses-card--body p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .courses-card--body p {
     font-size: 0.8rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .courses-card--body p {
     font-size: 1rem;
   }
 }
-
 .courses-card a {
   color: rgba(0, 0, 0, 0.938);
 }
-
 .courses-card:hover {
   box-shadow: 2px 2px 20px 5px rgba(54, 54, 54, 0.5);
 }
-
 .courses--info {
   text-align: center;
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
 }
-
 .courses--info a {
   color: #fff;
 }
-
 .courses--info a:hover {
   text-shadow: 2px 2px 10px #000;
 }
 
 .contact {
   padding: 8rem 20rem;
-  background-color: #e0e0e0;
+  background-color: rgb(224, 224, 224);
 }
-
 @media only screen and (max-width: 576px) {
   .contact {
     padding: 4rem 2rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .contact {
     padding: 4rem 2rem;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .contact {
     padding: 8rem 6rem;
   }
 }
-
-@media only screen and (min-width: 1400px) {
-  .contact {
-    padding: 8rem 20rem;
-  }
-}
-
 .contact-card {
   display: flex;
   justify-content: space-between;
@@ -2045,7 +1837,6 @@ footer .legal {
   padding: 2rem 3rem;
   border-radius: 0.5rem;
 }
-
 @media only screen and (max-width: 576px) {
   .contact-card {
     flex-direction: column;
@@ -2053,7 +1844,6 @@ footer .legal {
     align-items: initial;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .contact-card {
     flex-direction: column;
@@ -2061,65 +1851,52 @@ footer .legal {
     align-items: initial;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .contact-card {
     flex-direction: row;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .contact-card img {
     width: 30rem;
   }
 }
-
 .contact-card--contents {
   flex-grow: 1;
 }
-
 .contact-card--contents h4 {
   font-size: 1.2rem;
 }
-
 @media only screen and (max-width: 576px) {
   .contact-card--contents h4 {
     font-size: 1rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .contact-card--contents h4 {
     font-size: 1rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .contact-card--contents h4 {
     font-size: 1.2rem;
   }
 }
-
 .contact-card--contents p {
   color: gray;
 }
-
 @media only screen and (max-width: 576px) {
   .contact-card--contents p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .contact-card--contents p {
     font-size: 0.9rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .contact-card--contents p {
     font-size: 1rem;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
