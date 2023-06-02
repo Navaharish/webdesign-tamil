@@ -39,7 +39,7 @@ function setMenuActive() {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
 
-      if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
         current = section.getAttribute("id");
       }
     });
